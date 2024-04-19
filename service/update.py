@@ -44,6 +44,9 @@ class CheckUpdateThread(threading.Thread):
         self.running = True
 
     def run(self):
+        if self.settings.get('skip_update_check'):
+            return
+
         network = Network.getInstance()
 
         try:

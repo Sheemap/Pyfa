@@ -338,7 +338,7 @@ class UpdateSettings:
         # Updates are completely suppressed via network settings
         # prerelease - If True, suppress prerelease notifications
         # version    - Set to release tag that user does not want notifications for
-        serviceUpdateDefaultSettings = {"prerelease": True, 'version': None}
+        serviceUpdateDefaultSettings = {"prerelease": True, 'version': None, 'skip_update_check': False}
         self.serviceUpdateSettings = SettingsProvider.getInstance().getSettings(
                 "pyfaServiceUpdateSettings",
                 serviceUpdateDefaultSettings
